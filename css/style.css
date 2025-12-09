@@ -1,0 +1,222 @@
+/* ========= Основні стилі ========= */
+body {
+  font-family:;
+  font-size: 100%;
+  background-color:#aaaaaa;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+}
+
+/* ========== Header ========== */
+header {
+  padding: 40px 0;
+  background-color:#111111;
+  text-align: center;
+}
+header h1 {
+  color: white;
+  margin: 0;
+}
+
+/* ========== Навігація ========== */
+nav {
+  background-color:#333;
+  text-align: center;
+  padding: 10px;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+nav li {
+  display: inline-block;
+  margin: 0 5px;
+}
+nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px;
+  transition: .3s;
+}
+nav a:hover {
+  background-color:#922b21;
+  border-radius: 5px;
+}
+
+/* ========== Абзаци ========== */
+p {
+  font-size: 16px;
+  line-height: 1.3em;
+  margin-top: 0.1em;
+  margin-bottom: 0.8em;
+}
+
+/* ========== Footer ========== */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #111111;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+}
+
+/* ========= ПОРТРЕТ (фото) ========= */
+.portrait-block {
+  text-align: center;
+  margin-top: 20px;
+}
+.portrait {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: inline-block;
+  border: 3px solid #6e2122;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+/* ========= ЗОБРАЖЕННЯ ========= */
+.inline-img {
+  text-align: center;
+  margin: 20px 0;
+}
+.inline-img img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+  margin: 10px;
+}
+
+/* ========= 3 фото в ряд ========= */
+.row-three {
+  text-align: center;
+}
+.row-three img {
+  width: 30%;
+  max-width: 300px;
+  margin: 5px;
+  border-radius: 8px;
+}
+
+/* ========= Відео в ряд ========= */
+.video-row {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+.video-row video {
+  width: 32%;
+  display: inline-block;
+  border-radius: 10px;
+}
+@media (max-width: 700px) {
+  .video-row video { width: 48%; }
+}
+@media (max-width: 500px) {
+  .video-row video { width: 100%; }
+}
+
+/* ========= ANIMATION ========= */
+.square {
+  width: 90px;
+  height: 90px;
+  margin: 30px auto;
+  background-color: #123456;
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  25% { background-color: yellow; }
+  100% { transform: rotate(360deg); }
+}
+
+/* ========= Form ========= */
+form {
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
+}
+textarea {
+  width: 95%;
+  padding: 5px;
+}
+input[type="text"], 
+input[type="email"] {
+  width: 95%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+input[type="submit"] {
+  padding: 7px 15px;
+  background:#6e1819;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background:#922b21;
+}
+
+/* ====== Блок біографії ====== */
+.about-block {
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 70px; /* щоб футер не перекривав */
+}
+
+.about-block h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.bio {
+  font-size: 22px;
+  line-height: 1.6;
+  width: 70%;
+  margin: auto;
+  color: #ffffff;
+}
+
+/* ====== Фото зліва і справа ====== */
+.photos {
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+  height: 230px;
+}
+
+.photo {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid black;
+  position: absolute;
+}
+
+/* ліве фото */
+.photo.left {
+  left: 10%;
+  top: 0;
+}
+
+/* праве фото */
+.photo.right {
+  right: 10%;
+  top: 0;
+}
